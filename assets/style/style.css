@@ -116,6 +116,7 @@ background-color: #c9afaf;
 
 .user-animation{
   rotate: 45deg;
+  background-color: red;
 }
 .first-animation{
   background-color: red;

@@ -94,16 +94,13 @@ let click8 = e => {
 click8(eigthLink);
 
 let nineLink = document.querySelector(".user");
-let presskey = e => {
-    if(e.key) {
-        if(e.key === 'x'){
-            e.classList.add('user-animation')
-        }
+document.addEventListener('keydown',keydown)
+function keydonw(e){
+    if(e.key == 'x'){
+        nineLink.classList('user-animation')
     }
-
 }
-presskey(nineLink);
-
+keydonw(nineLink);
 
 
 
