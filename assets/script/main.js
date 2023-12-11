@@ -35,6 +35,8 @@ let click = third => {
     third.addEventListener("click", () => {/*aanpassen kleur bij click*/
         third.style.color = 'red'
         console.log('click on element');
+        third.innerHTML = "The & element is being clicked";
+
     });
 }
 click(thirdLink);
@@ -60,26 +62,35 @@ let clicktoggle = five => {
 clicktoggle(fiveLink);
 
 
-let sixLink = document.querySelectorAll('.fix');
-let clickfunction = (e) => {
-    e.addEventListener("click", () => {
-        e.classList.add('fix-animation');/*als mystyle niet ebstaat
-        voeg toe en voer bij iedere klick de proporties toe*/
+let sixLink = document.querySelector('.fix');
+
+let clickfunction = (six) => {
+    six.addEventListener('mouseleave', () => {
+        six.classList.add('fix-animation');
     });
 }
 
 clickfunction(sixLink);
 
+
+
+
 let sevenLink = document.querySelector(".the");
 let clickscale = sevem => {
-    sevem.addEventListener("click", () => {
-        sevem.style.scale = 1.5;
-        console.log('click on element');
+    sevem.addEventListener("wheel", () => {
+        sevem.classList.add('the2');
     });
 }
 clickscale(sevenLink);
 
-let eigthLink = document.querySelector(".the");
+let eigthLink = document.querySelector(".flow");
+let click8 = e => {
+    e.addEventListener('mouseup', () => {
+        e.style.display = 'none';
+        console.log('display none on element');
+    });
+}
+click8(eigthLink);
 
 
 
@@ -87,6 +98,7 @@ let eigthLink = document.querySelector(".the");
 
 
 
+// https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
 
 // let frontendlink = document.querySelector('section')
 // frontendlink.textContent=frontendlink.classList.contains('first')

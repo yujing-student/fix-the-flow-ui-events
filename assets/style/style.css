@@ -102,8 +102,14 @@ background-color: #c9afaf;
   display: none;
 }
 .fix-animation{
-  animation-delay: revert;
   background-color: aqua;
+  font-size: 5em;
+}
 
+.flow-2{
+  background-color: beige;
 
+}
+.the2{
+  scale: 1.5;
 }
