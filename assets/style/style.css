@@ -79,3 +79,31 @@ a:nth-of-type(12) {
 }
 
 /* Jouw animaties */
+.mystyle {
+background-color: #2ecbee;
+  color: greenyellow;
+}
+
+.sixLink{
+background-color: #c9afaf;
+  cursor: pointer;
+
+
+}
+.sixLink:hover{
+  background-color: red;
+}
+.sevenLink:hover{
+  background-color: aqua;
+}
+
+#the {
+  background-color: red;
+  display: none;
+}
+.fix-animation{
+  animation-delay: revert;
+  background-color: aqua;
+
+
+}
