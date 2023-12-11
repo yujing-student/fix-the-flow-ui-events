@@ -9,11 +9,11 @@ function jumpHandler() {
 }
 
 let firstLink = document.querySelector('.first');
-mouseover = frontendLink => {
+let mouseover = frontendLink => {
     frontendLink.addEventListener('mouseover', () => {
         /*bij mouse over maak de achtergrondkleur rood*/
-        frontendLink.style.background = 'red';
-
+        // frontendLink.style.background = 'red';
+        frontendLink.classList.add('first-animation');
         console.log('mouse is over frontend');
     });
 }
@@ -24,7 +24,8 @@ let SecondLink = document.querySelector('.design');
 let mousout = second => {
 
     second.addEventListener('mouseout', () => {/*als je met je muis op het element staat en dan weer weggaat dan word die blauw*/
-        second.style.background = 'blue';
+        // second.style.background = 'blue';
+        second.classList.add('design-animation');
         console.log('Mouse is op design geweest en weer weg');
     });/*https://www.w3schools.com/jsref/event_onmouseout.asp*/
 }
@@ -92,7 +93,16 @@ let click8 = e => {
 }
 click8(eigthLink);
 
+let nineLink = document.querySelector(".user");
+let presskey = e => {
+    if(e.key) {
+        if(e.key === 'x'){
+            e.classList.add('user-animation')
+        }
+    }
 
+}
+presskey(nineLink);
 
 
 

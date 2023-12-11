@@ -113,3 +113,14 @@ background-color: #c9afaf;
 .the2{
   scale: 1.5;
 }
+
+.user-animation{
+  rotate: 45deg;
+}
+.first-animation{
+  background-color: red;
+}
+
+.design-animation{
+  background-color: blue;
+}
