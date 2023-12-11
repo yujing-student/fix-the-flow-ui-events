@@ -8,101 +8,115 @@ function jumpHandler() {
     console.log(interaction.classList.toggle('jump'))
 }
 
-let firstLink = document.querySelector('.first');
-let mouseover = frontendLink => {
-    frontendLink.addEventListener('mouseover', () => {
-        /*bij mouse over maak de achtergrondkleur rood*/
-        // frontendLink.style.background = 'red';
-        frontendLink.classList.add('first-animation');
+/*1ste link*/
+let mouseover = first => {
+    first = document.querySelector('.frontend');
+    first.addEventListener('mouseover', () => {
+        /*bij mouse over maakt de achtergrondkleur rood*/
+        first.classList.add('frontend-animaton');
         console.log('mouse is over frontend');
     });
-}
-mouseover(firstLink);
+}/*1ste interactie*/
+mouseover();
+
 
 // https://www.w3schools.com/jsref/obj_mouseevent.asp
-let SecondLink = document.querySelector('.design');
-let mousout = second => {
 
+let mousout = second => {
+    second = document.querySelector('.design');
     second.addEventListener('mouseout', () => {/*als je met je muis op het element staat en dan weer weggaat dan word die blauw*/
         // second.style.background = 'blue';
         second.classList.add('design-animation');
         console.log('Mouse is op design geweest en weer weg');
     });/*https://www.w3schools.com/jsref/event_onmouseout.asp*/
-}
-mousout(SecondLink);
+}/*2de interacite*/
+mousout();
 
-let thirdLink = document.querySelector('.and')
+
 let click = third => {
+    third = document.querySelector('.and')
     third.addEventListener("click", () => {/*aanpassen kleur bij click*/
         third.style.color = 'red'
         console.log('click on element');
         third.innerHTML = "The & element is being clicked";
 
     });
-}
-click(thirdLink);
+}/*3de interacite*/
+click();
 
-let fourthLink = document.querySelector('.development');
+
 let clickBackground = fourth => {
+    fourth = document.querySelector('.development');
     fourth.addEventListener("dblclick", () => {
         fourth.style.backgroundColor = 'purple'; /*aanpassen kleur bij klik*/
         console.log('click on element');
     });
 }
-clickBackground(fourthLink);
+clickBackground();
 
-let fiveLink = document.querySelector('.sprint5');
 
 let clicktoggle = five => {
+    five = document.querySelector('.sprint5');
     five.addEventListener("click", () => {
-        five.classList.toggle('mystyle');/*als mystyle niet ebstaat
+        five.classList.toggle('sprint5-animation');/*als mystyle niet ebstaat
         voeg toe en voer bij iedere klick de proporties toe*/
     });
 }
 
-clicktoggle(fiveLink);
+clicktoggle();
 
 
-let sixLink = document.querySelector('.fix');
+// let sixLink = document.querySelector('.fix');
 
 let clickfunction = (six) => {
+    six = document.querySelector(".fix");
     six.addEventListener('mouseleave', () => {
         six.classList.add('fix-animation');
     });
 }
 
-clickfunction(sixLink);
+clickfunction();
 
 
-
-
-let sevenLink = document.querySelector(".the");
+// let sevenLink = document.querySelector(".the");
 let clickscale = sevem => {
+    sevem = document.querySelector(".the");
     sevem.addEventListener("wheel", () => {
-        sevem.classList.add('the2');
+        sevem.classList.add('the-animation');
     });
 }
-clickscale(sevenLink);
+clickscale();
 
-let eigthLink = document.querySelector(".flow");
-let click8 = e => {
-    e.addEventListener('mouseup', () => {
-        e.style.display = 'none';
+
+let click8 = eight => {
+    eight = document.querySelector(".flow");
+    eight.addEventListener('mouseup', () => {
+        eight.style.display = 'none';
         console.log('display none on element');
     });
 }
-click8(eigthLink);
+click8();
 
-let nineLink = document.querySelector(".user");
-document.addEventListener('keydown',keydown)
-function keydonw(e){
-    if(e.key == 'x'){
-        nineLink.classList('user-animation')
-    }
+let keyA = (nine) => {
+    nine = document.querySelector('.user');
+    nine.addEventListener('keydown', clickkey => {
+        if (clickkey.key === 'a') {/*hoofdlettergevoelig*/
+            nine.classList.add('user-animation');
+        }
+    });
 }
-keydonw(nineLink);
 
+keyA();
+let keyL = (Ten) => {
+    Ten = document.querySelector('.interface');
+    Ten.addEventListener('keyup', releasekey => {
+        if (releasekey.key === 'l') {
+            Ten.classList.add('interface-animation');
+        }
+    });
+}
 
+keyL();
 
 
 // https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
