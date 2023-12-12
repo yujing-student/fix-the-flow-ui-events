@@ -103,18 +103,18 @@ h1, p {
 
 .fix-animation {
     background-color: aqua;
-    font-size: 5em;
+    font-size: 5em;/*andere grootte meegeven*/
 }
 
 .the-animation {
-    scale: 1.5;
+    scale: 2.5;/*vergroot*/
 }
 
 .user-animation {
-    rotate: 45deg;
+    rotate: 45deg;/*draai element*/
     background-color: red;
 }
 
 .interface-animation {
-    transform: translate(5em, 1em);
+    transform: translate(15em, 1em);/*verplaats element*/
 }
