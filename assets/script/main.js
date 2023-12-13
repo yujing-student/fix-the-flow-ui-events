@@ -100,14 +100,24 @@ let mouseup = eight => {
 }
 mouseup();
 
-let KeydownA = (nine) => {
-    nine = document.querySelector('.user');
+
+document.addEventListener("keydown",function(event){
+    console.log(event.key)
+    if(event.key == "y"){
+        console.log("we hebben een Y")
+        document.querySelector('.user').classList.toggle('user-animation');
+    }
+})
+
+
+let KeydownA = () => {
+   let  nine = document.querySelector('.user');
     nine.addEventListener('keydown', clickkey => {
         /*als de key a is ingedrukt pas de proporties van de class toe*/
         if (clickkey.key === 'a') {/*hoofdlettergevoelig*/
 
             nine.classList.add('user-animation');
-        }
+        }/**/
     });
 }
 
@@ -122,7 +132,7 @@ let KeyUpL = (Ten) => {
     });
 }
 
-KeyUpL();
+KeyUpL('');
 
 // hier naar kijken voor in leertaak
 // https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
